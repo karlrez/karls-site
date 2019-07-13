@@ -5,5 +5,5 @@ from . import views
 app_name = 'meme_review'
 
 urlpatterns = [
-path('', views.ListView.as_view(), name='home'),
+path('', views.PostListView.as_view(), name='home'),
 ]

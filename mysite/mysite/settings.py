@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'meme_review',
-    'polls_app'
+    'polls_app',
 ]
 
 MIDDLEWARE = [
