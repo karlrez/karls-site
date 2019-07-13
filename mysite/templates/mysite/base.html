@@ -1,0 +1,41 @@
+{% load static %}
+
+<!--CSS-->
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+<!--Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Karl's Website</title>
+  </head>
+  <body>
+    <header class="side-header">
+      <a href="#">
+      <div class="">
+        <img class="pic" src="{% static "poo.jpg" %}" alt="picture not available">
+
+      </div>
+    </a>
+    <nav class="navbar-side">
+      <ul>
+        <li class="sidebar-items"><a class="sidebar-anchor" href="{% url 'meme_review:home' %}" role="button">Meme Review</a></li>
+        <li class="sidebar-items"><a class="sidebar-anchor" href="{% url 'polls_app:index' %}" role="button">Polls!</a></li>
+        <li class="sidebar-items"><a class="sidebar-anchor" href="#" role="button">Other App</a></li>
+        <li class="sidebar-items"><a class="sidebar-anchor" href="#" role="button">Contact</a></li>
+        </ul>
+
+
+    </nav>
+
+    </header>
+    <div class="body-block">
+    {% block body_block %}
+    {% endblock %}
+    </div>
+
+  </body>
+</html>
