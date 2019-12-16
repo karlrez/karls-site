@@ -1,16 +1,14 @@
 from django.db import models
-from django.utils import timezone
-import datetime
-from django.urls import reverse
+
 # Create your models here.
+class MemeUpload(models.Model):
+    user = models.CharField(max_length=50)
+    description = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='media/uploads')
+    pub_date = models.DateTimeField(auto_now_add=True)
 
-class Post(models.Model):
-    post_image = models.ImageField('img', upload_to='static/meme_review', blank=True)
-    caption = models.TextField(max_length=200)
-    pub_date = models.DateTimeField()
-
-class Comment(models.Model):
-    name = models.TextField(max_length=200)
-    comment = models.TextField()
-    published_date = models.DateTimeField()
-    for_post = models.ForeignKey(Post, on_delete=models.CASCADE)
+#class Comment(models.Model):
+    #post = models.ForeignKey(MemeUpload, related_name='comments', on_delete=models.CASCADE)
+    #user = models.CharField(max_length=50)
+    #description = models.TextField(max_length=100)
+    #created = models.DateTimeField(auto_now_add=True)

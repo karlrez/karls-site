@@ -3,6 +3,13 @@ body {
   color: #000000;
   font-family: 'Montserrat'
 }
+.header {
+  background-color: #ebebe0;
+  padding: 5px;
+}
+.bio {
+  width: 50%;
+}
 
 a {
   color: #000000;
@@ -19,6 +26,10 @@ a:hover {
   margin-top: 1rem
 }
 
+.pic-div {
+
+}
+
 .side-header {
   position: fixed;
   width: 15%;
@@ -31,7 +42,7 @@ a:hover {
 }
 
 .sidebar-items {
-  padding: 25px;
+  padding: 20px;
 }
 
 .sidebar-items: hover {
@@ -47,7 +58,7 @@ a:hover {
 }
 
 .body-block {
-  margin-left: 19%;
+  margin-left: 19%
 }
 
 /* CSS for polls_app */
@@ -75,4 +86,15 @@ a:hover {
 /* index page */
 .results-li {
   padding-top: 10px;
+}
+
+/* CSS for meme_review */
+.upload-link {
+  width: 200px;
+  padding: 5px;
+  background-color: #ffcccc;
+}
+
+.meme {
+  margin-top: 20px;
 }

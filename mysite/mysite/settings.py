@@ -28,9 +28,9 @@ STATICFILES_DIRS = [
 SECRET_KEY = 'v5g7zl*5b(96(d-vzv@mfgamsy+=0*xl2g#qianw=iv=#c*sr-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['karlrez.pythonanywhere.com']
 
 
 # Application definition
@@ -126,3 +126,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/static'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/media')
+MEDIA_URL = '/media/'

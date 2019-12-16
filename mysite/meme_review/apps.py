@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class MemeReviewConfig(AppConfig):
-    name = 'meme_review'
+class MemePageConfig(AppConfig):
+    name = 'meme_page'

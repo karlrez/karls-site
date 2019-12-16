@@ -1,21 +1,33 @@
 {% extends 'mysite/base.html' %}
 
 {% block body_block %}
-{% load static %}
-<h1>MEME REVIEW</h1>
+<div class="header">
+  <h1>MEMES</h1>
+</div>
+<div class="upload-link">
+<h3 class="meme_upload"><a href="{% url 'meme_review:upload_page' %}">Upload a Meme!</a></h3>
+</div>
 
-<div class="container">
-  {% if all_posts %}
-      <ul>
-      {% for post in all_posts %}
-          <div class="">
-          <li> <img src="/{{ post.post_image.url }}" alt="not available"></li>
-            </div>
-            </ul>
+      {% for image in images %}
+
+<div class="meme">
+        <div class="row">
+          <div class="col">
+              <h2 class="text-center"> {{image.description}}</h2>
+          </div>
+        </div>
+
+      <div class="text-center">
+          <a href=""><img src="{{ image.image.url}}" alt="not available" width="600px" height="auto"></a>
+    </div>
+
+      <div class="row">
+        <div class="col-sm">
+            <p>By: {{image.user}}<br>Submitted: {{image.pub_date}}</p>
+        </div>
+      </div>
+    </div>
       {% endfor %}
 
-      {% else %}
-      <p>no posts available</p>
-      {% endif %}
 
 {% endblock %}
