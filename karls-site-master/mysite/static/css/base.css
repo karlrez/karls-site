@@ -3,98 +3,80 @@ body {
   color: #000000;
   font-family: 'Montserrat'
 }
-.header {
-  background-color: #b3f0ff;
-  padding: 5px;
-}
-.bio {
-  width: 50%;
+
+.wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
 }
 
-a {
-  color: #000000;
-  font-weight: bold;
-  text-decoration: none !important;
+.header {
+    background-color: #ebebe0;
+    padding: 1px;
+}
+
+.sidebar-anchor {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none ;
 }
 
 a:hover {
   color: #66a3ff;
   transition: 0.6s;
 }
+
 .pic {
-  border-radius: 50%;
-  margin-top: 1rem
-}
-
-.pic-div {
-
+    width: 90%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 1px;
+    margin-left: 4%;
 }
 
 .side-header {
-  position: fixed;
-  width: 15%;
-  min-width: 220px;
   height: 100%;
-  padding: 1rem 1.5%;
-  overflow-x: hidden;
+  width: 180px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
   background-color: #ebebe0;
-  z-index: 2;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
 .sidebar-items {
   padding: 25px;
 }
 
-.sidebar-items: hover {
-
-}
-
-.sidebar-li {
-
-}
-
-.sidebar-anchor {
-
-}
-
 .body-block {
-  margin-left: 19%;
+    margin-left: 200px;
 }
 
-/* CSS for polls_app */
-/* index page */
-.poll-image {
-  border-radius: 8px;
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+/* meme app */
+.meme {
+    padding-top: 30px;
+}
+
+.upload-link {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 200px;
+    padding: 3px;
+    background-color: #d9d9d9;
+}
+
+/* polls app */
+.poll-index-li {
+    list-style-type: none;
 }
 
 .li-div {
-  padding: 50px;
-}
-
-.poll-index-li {
-  list-style-type: none;
-  border-style: hidden;
-}
-/* choice page */
-.choice-div {
-  padding-top: 10px;
-}
-
-.vote-button {
-  padding-top: 10px;
-}
-/* index page */
-.results-li {
-  padding-top: 10px;
-}
-
-/* CSS for meme_review */
-.upload-link {
-  width: 200px;
-  padding: 5px;
-  background-color: #ffcccc;
-}
-
-.meme {
-  margin-top: 20px;
+  padding: 40px;
 }

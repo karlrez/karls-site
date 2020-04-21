@@ -4,7 +4,7 @@
 
 {% block body_block %}
 <div class="header">
-<h1>Please take a moment to answer a poll!</h1>
+<h1>Answer a poll!</h1>
 </div>
 
 <div class="container">
@@ -12,8 +12,8 @@
       <ul>
       {% for question in latest_question_list %}
           <div class="li-div">
-          <li class="poll-index-li"><a href="/polls_app/{{ question.id }}/"><img class="poll-image" src="{{ question.question_image.url }}" alt="image not available :(" width="200px"></a>
-            <a href="/polls_app/{{ question.id }}/">{{ question.question_text }}</a> - Posted {{ question.pub_date|date:"m/d/Y" }}</li>
+          <li class="poll-index-li"><a href="/polls_app/{{ question.id }}/"><img class="poll-image" src="{{ question.question_image.url }}" alt="image not available :(" width="200px"></a></li>
+          <a class="poll-index-a" href="/polls_app/{{ question.id }}/">{{ question.question_text }}</a> - Posted {{ question.pub_date|date:"m/d/Y" }}
             </div>
       {% endfor %}
       </ul>

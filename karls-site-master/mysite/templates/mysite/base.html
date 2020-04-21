@@ -12,22 +12,23 @@
     <meta charset="utf-8">
     <title>Karl's Website</title>
   </head>
+
   <body>
-    <header class="side-header">
-      <div class="pic-div">
-        <a href="{% url 'meme_review:biopage' %}"><img class="pic" src="{% static "20190615_140344.jpg" %}" alt="picture not available" height="250" width="auto"></a>
-      </div>
+        <div class="side-header">
+          <div class="pic-div">
+            <a href="{% url 'meme_review:biopage' %}"><img class="pic" src="{% static "20190615_140344.jpg" %}" alt="picture not available" height="250" width="auto"></a>
+          </div>
 
-    <nav class="navbar-side">
-      <ul>
-        <li class="sidebar-items"><a class="sidebar-anchor" href="{% url 'meme_review:home' %}" role="button">Memes</a></li>
-        <li class="sidebar-items"><a class="sidebar-anchor" href="{% url 'polls_app:index' %}" role="button">Polls</a></li>
-        </ul>
+        <nav class="navbar-side">
+          <ul>
+            <li class="sidebar-items"><a class="sidebar-anchor" href="{% url 'meme_review:home' %}" role="button">Memes</a></li>
+            <li class="sidebar-items"><a class="sidebar-anchor" href="{% url 'polls_app:index' %}" role="button">Polls</a></li>
+            </ul>
+        </nav>
 
+        </div>
 
-    </nav>
-
-    </header>
+    <!--All other templates will add text in this div -->
     <div class="body-block">
     {% block body_block %}
     {% endblock %}
