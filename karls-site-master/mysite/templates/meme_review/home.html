@@ -1,33 +1,33 @@
 {% extends 'mysite/base.html' %}
 
 {% block body_block %}
-<div class="header">
-  <h1>MEMES</h1>
-</div><br>
-<div class="upload-link">
-<h3 class="meme_upload"><a href="{% url 'meme_review:upload_page' %}">Upload a Meme!</a></h3>
+
+<h1>Pictures!</h1>
+
+<br>
+<button type="button"><a href="{% url 'meme_review:upload_page' %}">Upload a Pic!</a></button><br><br>
+
+{% if images %}
+{% for image in images %}
+
+<div>
+  <h2 class="text-center"> {{image.description}}</h2>
+  <div>
+    <a href="/pics/{{ image.id }}/"><img src="{{ image.image.url }}" alt="not available" width="600px"
+        height="auto"></a><br>
+    {% if image.comments.count == 0 %}
+    <a href="/pics/{{ image.id }}/">No Comments</a>
+    {% else %}
+    <a href="/pics/{{ image.id }}/">{{ image.comments.count }} Comment{{ image.comments|pluralize }}</a>
+    {% endif %}
+  </div>
+      <p>By: {{image.user}}<br>Submitted: {{image.pub_date}}</p>  
 </div>
 
-      {% for image in images %}
-
-<div class="meme">
-        <div class="row">
-          <div class="col">
-              <h2 class="text-center"> {{image.description}}</h2>
-          </div>
-        </div>
-
-      <div class="text-center">
-          <a href=""><img src="{{ image.image.url}}" alt="not available" width="600px" height="auto"></a>
-    </div>
-
-      <div class="row">
-        <div class="col-sm">
-            <p>By: {{image.user}}<br>Submitted: {{image.pub_date}}</p>
-        </div>
-      </div>
-    </div>
-      {% endfor %}
+{% endfor %}
+{% else %}
+<p>No pictures yet!</p>
+{% endif %}
 
 
 {% endblock %}

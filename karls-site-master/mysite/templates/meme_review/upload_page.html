@@ -2,14 +2,14 @@
 
 
 {% block body_block %}
-<h1 class="header">Upload a meme!</h1>
+<h1 class="header">Upload a picture!</h1>
 
-<div class="jumbotron">
+<div>
   <form enctype="multipart/form-data" method="post" >
     {% csrf_token %}
     {{ MemeUploadForm.as_p }}
     <input type="submit" name="" value="Upload">
-</div>
+</div><br>
 
 <a href="{% url 'meme_review:home' %}">Back</a>
 {% endblock %}

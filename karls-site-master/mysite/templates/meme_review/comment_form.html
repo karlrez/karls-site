@@ -1,0 +1,15 @@
+{% extends 'mysite/base.html' %}
+
+
+{% block body_block %}
+<h1 class="header">Comment</h1>
+
+<div>
+  <form enctype="multipart/form-data" method="post" >
+    {% csrf_token %}
+    {{ CommentForm }}
+    <input type="submit" name="" value="Upload">
+</div>
+
+<a href="{% url 'meme_review:post_detail' %}">Back</a>
+{% endblock %}

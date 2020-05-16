@@ -1,38 +1,63 @@
 {% load static %}
 
-<!--CSS-->
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
-
-<!--Google Fonts-->
-<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Karl's Website</title>
-  </head>
 
-  <body>
-        <div class="side-header">
-          <div class="pic-div">
-            <a href="{% url 'meme_review:biopage' %}"><img class="pic" src="{% static "20190615_140344.jpg" %}" alt="picture not available" height="250" width="auto"></a>
-          </div>
+<head>
+  <title>Karl's Website</title>
+  <meta charset="utf-8">
+  <!--CSS-->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
 
-        <nav class="navbar-side">
+<body>
+  <div id="wrapper">
+    <header class="clearfix">
+      <a href="{% url 'meme_review:biopage' %}"><img class="pic" src="{% static '20190615_140344.jpg' %}"
+          alt="picture not available"></a>
+      <div id="title">
+        <h1>Karl Rezansoff</h1>
+        <h2>Ottawa, ON</h2>
+        <h2>Email: reza0028@algonquinlive.com</h2>
+        <br><br><a href= 'https://ca.linkedin.com/in/karlrezansoff'><img class="icon" src="{% static "LI-In-Bug.png" %}" alt="linkedin"></a>
+        <a href= 'https://github.com/karlrez'><img class="icon" src="{% static "GitHub-Mark-32px.png" %}" alt="github"></a>
+      </div>
+    </header>
+    
+    <nav>
+      <div id="menuItems">
           <ul>
-            <li class="sidebar-items"><a class="sidebar-anchor" href="{% url 'meme_review:home' %}" role="button">Memes</a></li>
-            <li class="sidebar-items"><a class="sidebar-anchor" href="{% url 'polls_app:index' %}" role="button">Polls</a></li>
-            </ul>
-        </nav>
+              <li class="dropdown">               
+                Django Projects
+                  <div class="dropdown-content">
+                    <a href="{% url 'meme_review:home' %}">Photo Upload</a>
+                    <a href="{% url 'polls_app:index' %}">Polls</a>
+                  </div>                    
+              </li>
+              <li class="dropdown">               
+                PHP Projects
+                  <div class="dropdown-content">
+                    <a href="https://wp-eatery.000webhostapp.com/">Restaurant Site</a>
+                  </div>                                                     
+              </li>
+              <li><a href="{% url 'meme_review:biopage' %}">Info</a></li>
+          </ul>
+      </div>
+  </nav>
 
-        </div>
+    <div id="content" class="clearfix">
+      <div class="main">
+        {% block body_block %} <!--all other templates show here-->
+        {% endblock %}
+      </div> <!--main div-->
+    </div> <!--content div-->
 
-    <!--All other templates will add text in this div -->
-    <div class="body-block">
-    {% block body_block %}
-    {% endblock %}
-    </div>
+    <footer>
+      <p>&copy;2020 Karl Rezansoff</p>
+  </footer>
 
-  </body>
+  </div> <!--wrapper div-->
+</body>
 </html>

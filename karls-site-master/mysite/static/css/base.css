@@ -1,82 +1,167 @@
-body {
-  background-color: #ffffff;
-  color: #000000;
-  font-family: 'Montserrat'
-}
-
-.wrapper {
-    margin-left:auto;
-    margin-right:auto;
-    width:960px;
-}
-
-.header {
+h1, h2, h3, h4, h5, h6,
+body, div, p, img{
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
     background-color: #ebebe0;
-    padding: 1px;
-}
-
-.sidebar-anchor {
     color: #000000;
-    font-weight: bold;
-    text-decoration: none ;
+    font-family: 'Montserrat';
 }
 
-a:hover {
-  color: #66a3ff;
-  transition: 0.6s;
+#wrapper{
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-.pic {
-    width: 90%;
-    height: auto;
-    border-radius: 50%;
-    margin-top: 1px;
-    margin-left: 4%;
+header{
+  margin: 0px;
+  width: 100%;
+  height: 175px;
+  border-bottom: 2px solid #000000;
 }
 
-.side-header {
-  height: 100%;
-  width: 180px;
-  position: fixed;
+header img{
+  float:left;
+  height: 165px;
+  max-width: auto;
+  box-shadow: 8px 0 8px 8px #d7d7c1
+}
+header #title{
+  float: right;
+  width:445px;
+  margin-right: 5px;
+}
+header h1{
+  margin: 5px;
+  text-align: right;
+  margin-bottom: 5px;
+}
+header h2{
+  text-align: right;
+  float: right;
+}
+
+header .icon{
+  float: right;
+  box-shadow: none;
+  max-width: 50px;
+  height: auto;
+  padding: 4px 4px 0 8px;
+}
+
+nav{
+  height: 70px;
+  border-bottom: 2px solid #000000;
+}
+nav #menuItems{
+  float:right;
+  margin-right: 20px;
+}
+nav li{
+  display: inline;
+  height:30px;
+  margin-left: 50px;
+  text-align:right;
+  font-size: 16pt;
+}
+nav a, a:visited{
+
+}
+nav a:hover{
+  text-decoration: underline;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #ebebe0;
-  overflow-x: hidden;
-  padding-top: 20px;
 }
 
-.sidebar-items {
-  padding: 25px;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-.body-block {
-    margin-left: 200px;
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-/* meme app */
-.meme {
-    padding-top: 30px;
+.main{
+  margin-left: -1px;
+  width:629px;
+  padding: 10px;
+  
 }
 
-.upload-link {
-    position: -webkit-sticky;
-    position: sticky;
-    width: 200px;
-    padding: 3px;
-    background-color: #d9d9d9;
+.main h1{
 }
 
-/* polls app */
-.poll-index-li {
-    list-style-type: none;
+#content{
+  border-bottom: 2px solid #000000;
+}
+.content_pic{
+  
 }
 
-.li-div {
-  padding: 40px;
+#content p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 5px;
+  text-align: justify;
+}
+
+#content button{
+    height: 30px; 
+    width: 150px; 
+    color: #f1f1f1;
+    font-family: 'Montserrat';
+}
+
+#content a{
+  font-family: 'Montserrat';
+}
+
+footer p{
+  text-align:center;
+  font-size: 10pt;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+table {
+border: 1px white;
+}
+
+table td{
+  padding:5px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  footer p{
+    font-size: 5pt;
+  }
 }

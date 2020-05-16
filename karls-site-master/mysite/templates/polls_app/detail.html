@@ -9,6 +9,7 @@
 
 <form action="{% url 'polls_app:vote' question.id %}" method="post">
 {% csrf_token %}
+<!--choice_set is default name for all objects in meta class-->
 {% for choice in question.choice_set.all %}
 <div class="choice-div">
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
@@ -20,6 +21,7 @@
 </div>
 </form>
 
+<br>
 <a href="{% url 'polls_app:index' %}">Back</a>
 
 {% endblock %}

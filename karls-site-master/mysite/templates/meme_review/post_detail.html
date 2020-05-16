@@ -1,0 +1,47 @@
+{% extends 'mysite/base.html' %}
+
+{% block body_block %}
+
+<h2 class="text-center"> {{memeupload.description}}</h2>
+
+<div>
+  <img src="{{ memeupload.image.url }}" alt="not available" width="700px" height="auto"><br>
+</div>
+
+<div>
+  <p>By: {{memeupload.user}}<br>Submitted: {{memeupload.pub_date}}</p>
+</div><br><br>
+
+<h2>Add a Comment</h2>
+
+<form method="POST">
+  {% csrf_token %}
+  <table style="border-spacing: 5px;">
+    {% for field in form.visible_fields %}
+    <tr>
+      <th>{{ field.label_tag }}</th>
+      <td>
+        {{ field.errors }}
+        {{ field }}
+        {{ field.help_text }}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <input type="submit" name="" value="Post">
+</form><br>
+
+<h3>Comments</h3>
+<div style="border: 0.2px solid grey;">
+  <!-- calling comments because we set the related_name field in the model -->
+  {% if comments %}
+  {% for comment in comments %}
+  <p style="margin-left: 2px; color:grey; font-size:small">{{ comment.user }}- {{ comment.created|date:'Y-m-d'}}</p>
+  <p style="margin-left: 10px;">{{ comment.description }}</p><br>
+  {% endfor %}
+  {% else %}
+  <p>No comments yet!</p>
+  {% endif %}
+</div>
+
+{% endblock %}
