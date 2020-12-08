@@ -21,26 +21,34 @@
         <h1>Karl Rezansoff</h1>
         <h2>Ottawa, ON</h2>
         <h2>Email: reza0028@algonquinlive.com</h2>
-        <br><br><a href= 'https://ca.linkedin.com/in/karlrezansoff'><img class="icon" src="{% static "LI-In-Bug.png" %}" alt="linkedin"></a>
-        <a href= 'https://github.com/karlrez'><img class="icon" src="{% static "GitHub-Mark-32px.png" %}" alt="github"></a>
+        <br><br><a href= 'https://ca.linkedin.com/in/karlrezansoff' target="_blank"><img class="icon" src="{% static "LI-In-Bug.png" %}" alt="linkedin"></a>
+        <a href= 'https://github.com/karlrez' target="_blank"><img class="icon" src="{% static "GitHub-Mark-32px.png" %}" alt="github"></a>
       </div>
     </header>
-    
+
     <nav>
       <div id="menuItems">
           <ul>
-              <li class="dropdown">               
-                Django Projects
+              <li class="dropdown">
+                ReactJS
+                  <div class="dropdown-content">
+                    <a href="https://karlrez.github.io/recipe-app/" target="_blank">Recipe App</a>
+                    <a href="https://karlrez.github.io/React-tic-tac-toe/" target="_blank">Tic Tac Toe Game</a>
+                    <a href="https://karlrez.github.io/React-Burger-Builder/" target="_blank">Burger Builder</a>
+                  </div>
+              </li>
+              <li class="dropdown">
+                Django
                   <div class="dropdown-content">
                     <a href="{% url 'meme_review:home' %}">Photo Upload</a>
                     <a href="{% url 'polls_app:index' %}">Polls</a>
-                  </div>                    
+                  </div>
               </li>
-              <li class="dropdown">               
-                PHP Projects
+              <li class="dropdown">
+                PHP
                   <div class="dropdown-content">
-                    <a href="https://wp-eatery.000webhostapp.com/">Restaurant Site</a>
-                  </div>                                                     
+                    <a href="https://wp-eatery.000webhostapp.com/" target="_blank">Restaurant Site</a>
+                  </div>
               </li>
               <li><a href="{% url 'meme_review:biopage' %}">Info</a></li>
           </ul>

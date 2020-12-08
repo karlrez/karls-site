@@ -60,6 +60,7 @@ nav #menuItems{
   float:right;
   margin-right: 20px;
 }
+
 nav li{
   display: inline;
   height:30px;
@@ -78,6 +79,7 @@ nav a:hover{
   position: relative;
   display: inline-block;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -106,7 +108,7 @@ nav a:hover{
   margin-left: -1px;
   width:629px;
   padding: 10px;
-  
+
 }
 
 .main h1{
@@ -116,7 +118,7 @@ nav a:hover{
   border-bottom: 2px solid #000000;
 }
 .content_pic{
-  
+
 }
 
 #content p{
@@ -127,8 +129,8 @@ nav a:hover{
 }
 
 #content button{
-    height: 30px; 
-    width: 150px; 
+    height: 30px;
+    width: 150px;
     color: #f1f1f1;
     font-family: 'Montserrat';
 }
