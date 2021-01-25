@@ -1,14 +1,22 @@
-h1, h2, h3, h4, h5, h6,
-body, div, p, img{
-    border: 0px;
-    padding: 0px;
-    margin: 0px;
-    background-color: #ebebe0;
-    color: #000000;
-    font-family: 'Montserrat';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+div,
+p,
+img {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  background-color: #ebebe0;
+  color: #000000;
+  font-family: "Montserrat";
 }
 
-#wrapper{
+#wrapper {
   width: 900px;
   margin-left: auto;
   margin-right: auto;
@@ -16,7 +24,7 @@ body, div, p, img{
   margin-bottom: 15px;
 }
 
-header{
+header {
   margin: 0px;
   width: 100%;
   height: 175px;
@@ -24,59 +32,59 @@ header{
   float: right;
 }
 
-header img{
-  float:left;
+header img {
+  float: left;
   height: 165px;
   max-width: auto;
-  box-shadow: 8px 0 8px 8px #d7d7c1
+  box-shadow: 8px 0 8px 8px #d7d7c1;
 }
-header #title{
+header #title {
   float: right;
-  width:445px;
+  width: 445px;
   margin-right: 5px;
 }
-header h1{
+header h1 {
   margin: 5px;
   text-align: right;
   margin-bottom: 5px;
 }
-header h2{
+header h2 {
   text-align: right;
   float: right;
 }
 
-header .icon{
+header .icon {
   float: right;
   box-shadow: none;
-  max-width: 50px;
-  height: auto;
-  padding: 4px 4px 0 8px;
+  width: auto;
+  height: 40px;
+  padding: 0 4px 0 4px;
 }
 
-nav{
+nav {
   height: 70px;
-  border-bottom: 2px solid #000000;
+  margin-bottom: 180px;
 }
-nav #menuItems{
-  float:right;
+nav #menuItems {
+  float: right;
   margin-right: 20px;
 }
 
-nav li{
+nav li {
   display: inline;
-  height:30px;
+  height: 30px;
   margin-left: 50px;
-  text-align:right;
+  text-align: right;
   font-size: 16pt;
 }
-nav a, a:visited{
-
+nav a,
+a:visited {
 }
-nav a:hover{
+nav a:hover {
   text-decoration: underline;
 }
 
-.dropdown{
+.dropdown {
   position: relative;
   display: inline-block;
 }
@@ -86,7 +94,7 @@ nav a:hover{
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -105,43 +113,42 @@ nav a:hover{
   display: block;
 }
 
-.main{
+.main {
   margin-left: -1px;
-  width:629px;
+  width: 629px;
   padding: 10px;
-
 }
 
-.main h1{
+.main h1 {
 }
 
-#content{
-  border-bottom: 2px solid #000000;
+#content {
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
 }
-.content_pic{
-
+.content_pic {
 }
 
-#content p{
+#content p {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-right: 5px;
   text-align: justify;
 }
 
-#content button{
-    height: 30px;
-    width: 150px;
-    color: #f1f1f1;
-    font-family: 'Montserrat';
+#content button {
+  height: 30px;
+  width: 150px;
+  color: #f1f1f1;
+  font-family: "Montserrat";
 }
 
-#content a{
-  font-family: 'Montserrat';
+#content a {
+  font-family: "Montserrat";
 }
 
-footer p{
-  text-align:center;
+footer p {
+  text-align: center;
   font-size: 10pt;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -156,15 +163,15 @@ footer p{
 }
 
 table {
-border: 1px white;
+  border: 1px white;
 }
 
-table td{
-  padding:5px;
+table td {
+  padding: 5px;
 }
 
 @media only screen and (max-device-width: 480px) {
-  footer p{
+  footer p {
     font-size: 5pt;
   }
 }

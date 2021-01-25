@@ -1,31 +1,39 @@
-{% extends 'mysite/base.html' %}
+{% extends 'mysite/base.html' %} {% block body_block %} {% load static %}
 
-{% block body_block %}
-{% load static %}
+<div>
+  Thanks for checking out my site! This site is meant to show my Python-Django
+  web apps as I learn the framework and to show some of my other projects.
+  <br /><br />
 
-<p>
-Thanks for checking out my site!
-This site is meant to show my Python-Django web apps as I learn the framework and to show some of my other projects. <br><br>
+  <strong>Some information about myself...</strong> <br />
+  I am currently studying computer programming and looking for a full time
+  position! My experience/study areas include:
+  <ul>
+    <li>
+      Object Oriented Programming (Java), Design Patterns, and Data Structures
+    </li>
+    <li>Web Development (Django, ReactJS, PHP, HTML, CSS)</li>
+    <li>
+      Database Systems (MySQL, PostgreSQL, Microsoft SQL Server, Oracle, Access
+      )
+    </li>
+    <li>Networking</li>
+    <li>Operating Systems (Windows, Ubuntu, CentOS)</li>
+    <li>Android Development</li>
+  </ul>
+  <br /><br />
 
-<strong>Some information about myself...</strong> <br>
-I am currently studying computer programming and looking for a full time position!
-
-My experience/study areas include:
-<ul>
-  <li>Object Oriented Programming (Java), Design Patterns, and Data Structures</li>
-  <li>Web Development (Django, ReactJS, PHP, HTML, CSS)</li>
-  <li>Database Systems (MySQL, PostgreSQL, Microsoft SQL Server, Oracle, Access )</li>
-  <li>Networking</li>
-  <li>Operating Systems (Windows, Ubuntu, CentOS)</li>
-  <li>Android Development</li>
-</ul>
-<br><br>
-
-<strong>I am available for work - get in touch!</strong><br>
-Email: karl_rez@outlook.com <br>
-Phone: 250-878-3531 <br>
-<a href= 'https://ca.linkedin.com/in/karlrezansoff' target="_blank"><img src="{% static "LI-In-Bug.png" %}" alt="linkedin" style="padding:6px 6px 0 0; width:50px; height:auto"></a>
-<a href= 'https://github.com/karlrez' target="_blank"><img src="{% static "GitHub-Mark-32px.png" %}" alt="github" style="padding:6px 6px 0 0; width:50px; height:auto"></a>
-</p>
+  <strong>I am available for work - get in touch!</strong><br />
+  Email: karl_rez@outlook.com <br />
+  Phone: 250-878-3531 <br />
+  <a href="https://ca.linkedin.com/in/karlrezansoff" target="_blank"
+    ><img src="{% static "LI-In-Bug.png" %}" alt="linkedin" style="padding:6px
+    6px 0 0; width:50px; height:auto"></a
+  >
+  <a href="https://github.com/karlrez" target="_blank"
+    ><img src="{% static "GitHub-Mark-32px.png" %}" alt="github"
+    style="padding:6px 6px 0 0; width:50px; height:auto"></a
+  >
+</div>
 
 {% endblock %}
